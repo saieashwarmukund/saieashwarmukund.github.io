@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="cg3sco_portfolio.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+<!-- Icon library code from: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="header">
+  <div class="topleft d-none d-lg-block d-xl-block">
+    <img src="img/icon.png" height=150px></img>
+  </div>
+  <h1 style="font-size:9vh;">
+    Saieashwar Mukund
+  </h1>
+    <div class="topright d-none d-lg-block d-xl-block">
+      <a href="https://www.facebook.com/Saieashwar.Mukund" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/itssaieashwar" class="fa fa-twitter"></a>
+      <a href="mailto:saieashwar@gmail.com" class="fa fa-google"></a>
+      <br>
+      <a href="https://www.linkedin.com/in/saieashwar-mukund-00814a165/" class="fa fa-linkedin"></a>
+      <a href="https://www.instagram.com/saieashwar.mukund/" class="fa fa-instagram"></a>
+      <a href="https://www.snapchat.com/add/itssaieashwar" class="fa fa-snapchat-ghost"></a>
+    </div>
+</div>
+
+<!-- Current tab text changes color JS adapted from: https://www.w3schools.com/howto/howto_js_active_element.asp-->
+<div class="fade-in">
+<div id="buttons">
+<button class="tablink active" onclick="openPage('Home', this)" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('About me', this)">About Me</button>
+<button class="tablink" onclick="openPage('Resume', this)">Resume</button>
+<button class="tablink" onclick="openPage('More', this)">More</button>
+</div>
+</div>
+
+<!--Animated blurred wallpaper adapted from: https://github.com/tipsy/bubbly-bg-->
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+  <script>
+  bubbly({
+      animate: true, // default is true
+      blur: 5, // default is 4
+      bubbleFunc: () => `hsla(${Math.random() * 360}, 100%, 50%, ${Math.random() * 0.25})`, // default is () => `hsla(0, 0%, 100%, ${r() * 0.1})`)
+      bubbles: 20,
+      canvas: document.querySelector("#background"), // default is created and attached
+      colorStart: "#4D6EB7", // default is blue-ish
+      colorStop: "#06173E",// default is blue-ish
+      compose: "light", // default is "lighter"
+      shadowColor: "#fff", // default is #fff
+      angleFunc: () => Math.random() * Math.PI * 2, // default is this
+      velocityFunc: () => 0.1 + Math.random() * 0.25, // default is this
+      radiusFunc: () => 4 + Math.random() * 50 // default is 4 + Math.random() * width / 25
+  });
+  </script>
+</body>
+
+
+<!-- Tabs adapted from:  https://www.w3schools.com/howto/howto_js_full_page_tabs.asp-->
+<body>
+  <div id="Home" class="tabcontent">
+    <img class="pfp d-none d-lg-block d-xl-block" src="img/pfp.png" align='left'>
+    <p style="font-size:24px; padding-top:100px; text-align:center; font-weight:700; text-transform:uppercase">
+      I am Saieashwar Mukund
+    </p>
+  <h3 style="font-size:50px; text-align:center; font-weight:900; padding-bottom:15px; color: #f1f1f1">DATA SCIENCE MAJOR</h3>
+  <p style="font-size:15px; text-align:center; line-height:32px">
+    I am currently moving onto my third year at the University of California, San Diego. <br>
+    Please navigate through my digital portfolio to learn more about me<br>
+    and feel free to contact me.
+    <br>
+    <img class="ucsd" src="img/ucsd.png">
+  </p>
+</div>
+
+<div id="About me" class="tabcontent">
+  <h3 style="font-family: Brush Script MT; font-size:50px; padding-top:100px; padding-left:100px">A bit about me</h3>
+  <p class="text-lg-left text-center" style="font-size:15px; padding:0px 50px 0px 50px;">
+    I was born in San Jose and was raised in Irvine, California.
+    In high school, I pursued my interests in music and art, as well as come across a new passion, journalism.
+    I was a part of a nationally-acclaimed high school newspaper and, at point, the front-page editor.
+    California has always been home to me so, after graduating from Irvine High School in 2016, I decided to attend UC San Diego for my udnergraduate education.
+    It was a home away from home, as the UCSD community welcomed me with open arms of new friends and kind professors.
+    I entered as a Human Biology major, as my mind was set on the medical path.
+    It took me a year realize my true passion lies in creativity and freedom of coding, after taking a Data Science class.
+    I was introduced to Python and have only broadened my horizons of computer proficieny and languages since then.
+    <br>
+    <br>
+    For a closer look at my education and qualifications, check out my resume.
+  </p>
+  <div style="width:100vw; overflow: hidden;">
+  <img class="seattle" src="img/seattle.png"></img>
+</div>
+</div>
+
+
+<div id="Resume" class="tabcontent">
+  <h3 style="font-family: Brush Script MT; font-size:50px; padding-top:100px; padding-left:100px">Resume</h3>
+  <img class="resume" src="img/SaieashwarMukund_website.png"></img>
+  <br><br>
+  <a href="img/SaieashwarMukund.pdf" class="resume_button" download> Download Resume </a>
+</div>
+
+<div id="More" class="tabcontent">
+  <h3 style="font-family:Brush Script MT; text-align:center; padding-top:85px; padding-bottom:0px; font-size:50px"> My Interests and Hobbies </h3>
+
+
+  <!-- Gallery code adapted from: https://www.w3schools.com/howto/howto_css_portfolio_gallery.asp -->
+  <link rel="stylesheet" type="text/css" href="cg3sco_portfolio_pics.css">
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<!-- Portfolio Gallery Grid -->
+<div style="color:black">
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img class="zoom" src="img/singing.jpg" style="width:100%">
+      <img class="zoom" src="img/stage2.jpg" style="width:100%">
+      <h3 style="padding:10px">Singing</h3>
+      <p>I have always been interested in singing. I participate in many events involving singing, whether religious or just for fun. More than anything, singing is a stress reliever. </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="img/tabla2.jpg" style="width:100%">
+    <img class="zoom" src="img/tabla.jpg" style="width:100%">
+      <h3 style="padding:10px">Tabla</h3>
+      <p>In addition to singing, I have been learning tabla, a set of Indian drums, since the age of 6. I genuinely enjoy calling my friends together for some spontaneous jam sessions.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img class="zoom" src="img/el_vaq.jpg" style="width:100%">
+      <h3 style="padding:10px">Journalism</h3>
+      <p>I am very interested in journalism and page editing because of my position on my high school newspaper. It taught me much about design, creativity, as well as copyright laws.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <div class="content">
+        <img class="zoom" src="img/aero.jpg" style="width:100%">
+        <h3 style="padding:10px">Dogs</h3>
+        <p>I have always wanted to own a dog, so much so that it is probably the first thing I will buy myself when I am financially stable. Whenever I am home, me and my friends plan to go to the dog beach or shelter just to be able to see and pet them.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+      <img class="zoom" src="img/beach.jpg" style="width:100%">
+      <img class="zoom" src="https://i.imgur.com/MeIi2Lw.jpg" style="width:100%">
+        <h3 style="padding:10px">Nature</h3>
+        <p>I love exploring new places and taking a mix of normal and somewhat quirky photos with my friends. Every summer we are excited to go some place different and out of the ordinary, always making new memories on our craze-filled journeys.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+      <a href="https://steamcommunity.com/id/SMileyface6969"> <img class="zoom" src="img/steam.jpg" style="width:100%"></a>
+      <img class="zoom" src="img/marth.jpg" style="width:100%">
+        <h3 style="padding:10px">Games</h3>
+        <p>Another way I love to relax is with, of course, video games. I enjoy many games, Counter-Strike: Global Offensive and Super Smash Bros. 4 are the ones I am currently very into. I am intrigued by the mechanics and creativity that developers put into their games. Click the image to go to my Steam profile, where I even have some of my photoshop work from in-game screenshots and item inventory showcased.</p>
+      </div>
+    </div>
+
+<!-- END GRID -->
+</div>
+</div>
+<!-- END MAIN -->
+</div>
+
+</div>
+
+<!-- Image gallery adapted from: https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp-->
+<div class="row2">
+  <div class="column2">
+    <a href="img/iron_man.png" targer="new">
+    <img class="zoom" src="img/iron_man.png" style="width:100%"></a>
+    <a href="https://i.imgur.com/cMlUCFo.jpg" targer="new">
+    <img class="zoom" src="https://i.imgur.com/cMlUCFo.jpg" style="width:100%"></a>
+    <a href="https://i.imgur.com/qdmn0QX.jpg" targer="new">
+    <img class="zoom" src="https://i.imgur.com/qdmn0QX.jpg" style="width:100%"></a>
+    <a href="https://i.imgur.com/oL8mvnW.jpg" targer="new">
+    <img class="zoom" src="https://i.imgur.com/oL8mvnW.jpg" style="width:100%"></a>
+    <a href="img/deag.jpg" targer="new">
+    <img class="zoom" src="img/deag.jpg" style="width:100%"></a>
+  </div>
+  <div class="column2">
+    <a href="img/ww2.jpg" targer="new">
+    <img class="zoom" src="img/ww2.jpg" style="width:100%; padding-top:75px"></a>
+    <a href="img/elephants.jpg" targer="new">
+    <img class="zoom" src="img/elephants.jpg" style="width:100%"></a>
+    <a href="img/chance.jpg" targer="new">
+    <img class="zoom" src="img/chance.jpg" style="width:100%"></a>
+    <a href="img/Photo_Manip.jpg" targer="new">
+    <img class="zoom" src="img/Photo_Manip.jpg" style="width:100%"></a>
+  </div>
+  <div class="column2">
+    <a href="https://i.imgur.com/ATeFuKc.jpg" targer="new">
+    <img class="zoom" src="https://i.imgur.com/ATeFuKc.jpg" style="width:100%"></a>
+    <a href="img/tiger.png" targer="new">
+    <img class="zoom" src="img/tiger.png" style="width:100%"></a>
+    <a href="img/awp.jpg" targer="new">
+    <img class="zoom" src="img/awp.jpg" style="width:100%"></a>
+    <a href="img/scout.jpg" targer="new">
+    <img class="zoom" src="img/scout.jpg" style="width:100%"></a>
+  </div>
+</div>
+<br>
+<div class="column" style="width:100%; padding-left:100px; padding-right:100px">
+  <div class="content">
+    <h3 style="padding:10px; color:black">Artwork</h3>
+    <p style="color:black">For as long as I can remember, I have been drawing and painting. I have recently been broadening my artistic skills by getting involved with Photoshop. Here is a gallery of my most recent and favorite works. Click on the images to open them in new windows</p>
+  </div>
+
+</div>
+
+</body>
+
+<script src = "cg3sco_portfolio.js">
+</script>
+</html>

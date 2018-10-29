@@ -1,0 +1,172 @@
+/* Obtained help on how to animate gradient from https://codepen.io/quasimondo/pen/lDdrF */
+body {
+  font-family: 'Roboto', sans-serif;
+	height: 100%;
+	color: #fff;
+  overflow-x: hidden;
+}
+
+
+.header {
+    font-family: "Brush Script MT";
+    height:150px;
+    color: #203F85;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+.topleft {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+p {
+  padding-left:150px;
+  padding-right:100px
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #193575;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  font-weight: bolder;
+  width: 25%;
+  border-bottom: 3px solid #193575;
+}
+
+.tablink:hover {
+  font-weight: bolder;
+  background-color: #091B43;
+}
+
+.active {
+  font-weight: bolder;
+  background-color: #f1f1f1;
+  color: #193575;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  font-family: 'Roboto', sans-serif;
+  color: #f1f1f1;
+  display: none;
+  height: 100%;
+}
+
+.pfp{
+  width: 472px;
+}
+
+.ucsd{
+  padding-top:50px;
+  width:150px
+}
+
+.seattle{
+   position: relative;
+   left: 50%;
+   top: 220px;
+   -webkit-transform: translateY(-50%) translateX(-50%);
+   width: 1277px;
+}
+
+.resume {
+  position: relative;
+  width: 575px;
+  left: 50%;
+  top: 100vh;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  display:block;
+  background-color: #f1f1f1;
+}
+
+.resume_button {
+  font-family: "Brush Script MT";
+  background-color: #f1f1f1;
+  color: #193575;
+  outline: none;
+  cursor: pointer;
+  font-size: 35px;
+  width: 250px;
+  margin:0 auto;
+  margin-bottom: 50px;
+  display:block;
+  padding-left: 10px;
+  padding-right:10px;
+  text-align: center;
+}
+.resume_button:hover {
+  background-color:#193575;
+  color:#f1f1f1;
+  text-decoration: none;
+  border: 1px solid white;
+}
+
+.topright{
+  position:absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.fa {
+  padding: 12px;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 3px 3px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.zoom {
+    transition: transform .1s; /* Animation */
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
