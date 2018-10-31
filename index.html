@@ -14,20 +14,20 @@
 <title> Saieashwar Mukund </title>
 
 <div class="header">
-  <div class="topleft d-none d-m-block d-lg-block d-xl-block">
+  <div class="fade-in topleft d-none d-m-block d-lg-block d-xl-block">
     <img src="img/icon.png" height=150px></img>
   </div>
-  <h1 class="d-none d-sm-block d-m-block d-lg-block d-xl-block" style="font-size:75px;">
+  <h1 class="fade-in d-none d-sm-block d-m-block d-lg-block d-xl-block" style="font-size:75px;">
     Saieashwar Mukund
   </h1>
-  <div class="d-block d-sm-none" style="position: relative; top: -30px;">
+  <div class="fade-in d-block d-sm-none" style="position: relative; top: -30px;">
     <h1 style="font-size:65px;">
       Saieashwar
       <br>
       Mukund
     </h1>
   </div>
-    <div class="topright d-none d-m-block d-lg-block d-xl-block">
+    <div class="fade-in topright d-none d-m-block d-lg-block d-xl-block">
       <a href="https://www.facebook.com/Saieashwar.Mukund" class="fa fa-facebook"></a>
       <a href="https://twitter.com/itssaieashwar" class="fa fa-twitter"></a>
       <a href="mailto:saieashwar@gmail.com" class="fa fa-google"></a>
@@ -39,17 +39,18 @@
 </div>
 
 <!-- Current tab text changes color JS adapted from: https://www.w3schools.com/howto/howto_js_active_element.asp-->
-<div class="fade-in">
-<div id="buttons">
-<button class="tablink active" onclick="openPage('Home', this)" id="defaultOpen">Home</button>
-<button class="tablink" onclick="openPage('About me', this)">About Me</button>
-<button class="tablink" onclick="openPage('Resume', this)">Resume</button>
-<button class="tablink" onclick="openPage('More', this)">More</button>
-</div>
+<div class="">
+  <div id="buttons">
+    <button class="tablink active" onclick="openPage('Home', this)" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('About me', this)">About Me</button>
+    <button class="tablink" onclick="openPage('Resume', this)">Resume</button>
+    <button class="tablink" onclick="openPage('More', this)">More</button>
+  </div>
 </div>
 
 <!--Animated blurred wallpaper adapted from: https://github.com/tipsy/bubbly-bg-->
 <body>
+  <!--
   <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
   <script>
   bubbly({
@@ -67,6 +68,7 @@
       radiusFunc: () => 4 + Math.random() * 50 // default is 4 + Math.random() * width / 25
   });
   </script>
+  -->
 </body>
 
 
@@ -88,7 +90,7 @@
 </div>
 
 <div id="About me" class="tabcontent">
-  <h3 style="font-family: Brush Script MT; font-size:50px; padding-top:100px; padding-left:100px">A bit about me</h3>
+  <h3 class="col-md-3 text-md-center text-center" style="font-family: Brush Script MT; font-size:50px; padding-top:100px;">About me</h3>
   <p class="text-lg-left text-center" style="font-size:15px; padding:0px 50px 0px 50px;">
     I was born in San Jose and was raised in Irvine, California.
     In high school, I pursued my interests in music and art, as well as come across a new passion, journalism.
@@ -109,7 +111,7 @@
 
 
 <div id="Resume" class="tabcontent">
-  <h3 style="font-family: Brush Script MT; font-size:50px; padding-top:100px; padding-left:100px">Resume</h3>
+  <h3 class="col-md-3 text-md-center text-center" style="font-family: Brush Script MT; font-size:50px; padding-top:100px;">Resume</h3>
   <img class="resume" src="img/SaieashwarMukund_website.png"></img>
   <br><br>
   <a href="img/SaieashwarMukund.pdf" class="resume_button" download> Download Resume </a>
