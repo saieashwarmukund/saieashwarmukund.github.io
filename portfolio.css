@@ -30,7 +30,7 @@ p {
   padding-right:100px
 }
 
-/* Style tab links */
+
 .tablink {
   background-color: #193575;
   color: white;
@@ -56,13 +56,13 @@ p {
   color: #193575;
 }
 
-/* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
   font-family: 'Roboto', sans-serif;
   color: #f1f1f1;
   display: none;
   height: 100%;
 }
+
 
 .pfp{
   width: 472px;
