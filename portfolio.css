@@ -82,7 +82,7 @@ p {
   position: relative;
   width: 575px;
   left: 50%;
-  top: 100vh;
+  top: 650px;
   -webkit-transform: translateY(-50%) translateX(-50%);
   display:block;
   background-color: #f1f1f1;
