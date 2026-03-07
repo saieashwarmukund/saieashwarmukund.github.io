@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
 
 :root {
-    --color-body: #f1f8e9;      
-    --color-heading: #c8e6c9;
-    --color-base: #001f3f; 
-    --color-base2: #001327; 
-    --color-brand: #ff6f61;
-    --color-brand2: #ffccbc;
+    --color-body: #e6f0eb;       /* Soft off-white for text */
+    --color-heading: #b99f65;    /* Warm BOTW gold for headings */
+    --color-base: #0c2519;       /* Deep phthalo green for navbar/sidebar */
+    --color-base2: #123524;      /* Lighter phthalo green for panels/backgrounds */
+    --color-brand: #8acaf7;      /* Vibrant green for buttons/links */
+    --color-brand2: #4abe91;     /* Soft baby blue for hover highlights */
     --sidbar-width: 240px;
     --font-base: "Bai Jamjuree";
 }
@@ -23,8 +23,11 @@
     color: #fff;
 }
 
-.navbar .nav-link:hover,
 .navbar .nav-link.active {
+    color: var(--color-heading);
+}
+
+.navbar .nav-link:hover{
     color: var(--color-brand);
 }
 
@@ -44,7 +47,7 @@
         flex-direction: column;
         justify-content: center;
     }
-
+    
     /* Blurred background image using ::before */
     .navbar::before {
         content: '';
@@ -53,10 +56,15 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url(../images/sidebar-img.jpg);
+        /* Dark phthalo green gradient overlay */
+        background: linear-gradient(
+                        rgba(12,37,25,0.85),   /* dark phthalo green */
+                        rgba(18,53,36,0.85)    /* lighter phthalo green from base2 */
+                    ),
+                    url(../images/sidebar-img-botw.jpg);
         background-size: cover;
         background-position: center;
-        filter: blur(3px); /* Apply blur to the background image */
+        filter: blur(1px); /* Apply blur to the background image */
         z-index: 1;
     }
 
@@ -78,9 +86,61 @@
     }
 }
 
+@media (max-width: 991.98px) {
+    /* Center navbar content in mobile menu */
+    .navbar .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* horizontally center */
+    }
+
+    .navbar-brand {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem;
+    }
+
+    .social-icons {
+        margin-top: 1rem;
+        justify-content: center; /* center social icons */
+    }
+
+    .social-icons.top-row,
+    .social-icons.bottom-row {
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+.profile-pic-wrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid var(--color-heading);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center -25%;
+    transform: scale(2.66);
+}
 
 body {
-    background-color: var(--color-base2);
+    background-color: var(--color-base);
     color: var(--color-body);
     font-family: var(--font-base), sans-serif;
 }
@@ -89,6 +149,7 @@ h1,h2,h3,h4,h5,h6 {
     color: var(--color-heading);
     font-weight: 700;
 }
+
 
 a {
     text-decoration: none;
@@ -121,7 +182,7 @@ img {
 }
 
 .bg-base {
-    background-color: var(--color-base);
+    background-color: var(--color-base2);
 }
 
 .full-height {
@@ -140,7 +201,7 @@ img {
 }
 
 .shadow-effect:hover {
-    box-shadow: -6px 6px 0 0 var(--color-brand);
+    box-shadow: -6px 6px 0 0 var(--color-heading);
 }
 
 .iconbox {
@@ -163,21 +224,23 @@ img {
 }
 
 .btn-brand {
-    background-color: var(--color-brand);
-    border-color: var(--color-brand);
+    background-color: var(--color-heading);
+    border-color: var(--color-heading);
     color: var(--color-base);
 }
 
 .btn-brand:hover,
 .btn-brand:focus {
-    background-color: var(--color-brand2);
+    background-color: var(--color-brand);
     color: var(--color-base);
-    border-color: var(--color-brand2);
+    border-color: var(--color-brand);
 }
 
 .link-custom {
     font-weight: 700;
     position: relative;
+    color: var(--color-brand);
+
 }
 
 .link-custom::after {
@@ -268,8 +331,6 @@ img {
     overflow: hidden;
 }
 
-
-
 .nav-tabs {
     justify-content: center; /* Center the tabs horizontally */
     border: none; /* Remove default border */
@@ -291,10 +352,22 @@ img {
     color: var(--color-brand);
 }
 
+
+
+
+
+/* ABOUT TAB*/
 /* General Tab Navigation Styling */
+.about-alignment {
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255,255,255, 0.1);
+}
+
 #interestsTab {
     font-family: var(--font-base);
-    background-color: var(--color-base2);
+    background-color: var(--color-base);
     border-radius: 8px;
     padding: 10px;
 }
@@ -313,17 +386,16 @@ img {
 
 /* Tab Button Hover */
 #interestsTab .nav-link:hover {
-    background-color: var(--color-brand2);
+    background-color: var(--color-brand);
     color: var(--color-base2);
 }
 
 /* Active Tab Button */
 #interestsTab .nav-link.active {
-    background-color: var(--color-brand);
+    background-color: var(--color-heading);
     color: var(--color-base);
     font-weight: 600;
 }
-
 
 
 #artCarousel .art-image {
@@ -337,59 +409,4 @@ img {
 }
 
 
-
-
-
-
-
-/* Flip Card Container */
-.flip-card {
-    perspective: 1000px;
-    position: relative;
-    height: 500px; /* Ensure consistent card height */
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    backface-visibility: hidden;
-}
-
-/* Front Side */
-.flip-card-front {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Back Side */
-.flip-card-back {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: rotateY(180deg);
-}
-
-/* Flipped State */
-.flipped .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-
-/* Ensure the timeline container has fixed dimensions */
-#timeline-container {
-    width: 100%;
-    height: 100%; /* Ensures it fits the full height of the card */
-    max-height: 400px; /* Set max-height to match the flip-card height */
-    overflow: hidden;
-}
 

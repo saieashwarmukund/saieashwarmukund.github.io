@@ -13,9 +13,17 @@ AOS.init({
 
 });
 
-function flipCard() {
-  const card = document.querySelector('.flip-card');
-  card.classList.toggle('flipped');
-}
+window.addEventListener('load', () => {
+    const tabContent = document.getElementById('interestsTabContent');
+    const tabs = tabContent.querySelectorAll('.tab-pane');
+    let maxHeight = 0;
 
-document.getElementById('loading-message').style.display = 'none';
+    tabs.forEach(tab => {
+        tab.style.display = 'block'; // temporarily show to measure
+        const height = tab.offsetHeight;
+        if (height > maxHeight) maxHeight = height;
+        tab.style.display = ''; // reset
+    });
+
+    tabContent.style.minHeight = maxHeight + 'px';
+});
